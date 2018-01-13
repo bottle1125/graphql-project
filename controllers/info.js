@@ -20,17 +20,18 @@ export const saveInfo = async (ctx, next) => {
 }
 
 export const deleteInfo = async (ctx, next) => {
-    const id = ctx.request.body.id;
-    // Info.findOne({ '_id': id }, function(err, doc) {
-    //     console.log(doc);
-    //     if(doc) {
-    //         doc.remove();
-    //     }
-    // })
-    console.log(ctx.request.body);
+    const id = ctx.request.body._id;
+    const info = await Info.findOne({_id: id});
 
-    const info = await Info.findOne({'weight': ctx.request.body.weight});
-    info.remove();
+    if(info) {
+        info.remove();
+        ctx.body = {
+            success: true
+        }
+    }
+    else {
+        ctx.body = '该对象不存在';
+    }
 }
 
 export const fetchInfo = async (ctx, next) => {
