@@ -3,6 +3,7 @@ import config from '../config';
 
 require('./schema/info');
 require('./schema/student');
+require('./schema/course');
 
 export const database = () => {
     mongoose.set('debug', true);
