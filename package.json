@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "dev": "webpack --config public/webpack.dev.js && node-dev start.js"
+    "dev": "nodemon -e . start.js public --devtool eval"
   },
   "author": "",
   "license": "ISC",
@@ -30,6 +30,11 @@
     "babel-preset-latest-node": "^0.4.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-3": "^6.24.1",
-    "webpack": "^3.10.0"
+    "html-webpack-plugin": "^2.30.1",
+    "koa-webpack-dev-middleware": "^2.0.2",
+    "koa-webpack-hot-middleware": "^1.0.3",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.1",
+    "webpack-hot-middleware": "^2.21.0"
   }
 }

@@ -21,6 +21,25 @@ app
     .use(router.routes())
     .use(router.allowedMethods());
 
+const webpack = require("webpack");
+const webpackDevMiddleware = require("koa-webpack-dev-middleware");
+const webpackHotMiddleware = require("koa-webpack-hot-middleware");
+const webpackDevConfig = require("./public/webpack.dev.js");
+
+const compiler = webpack(webpackDevConfig);
+
+app.use(
+  webpackDevMiddleware(compiler, {
+    publicPath: webpackDevConfig.output.publicPath,
+    noInfo: true,
+    stats: {
+      colors: true
+    }
+  })
+);
+
+app.use(webpackHotMiddleware(compiler));
+
 app.listen(4000);
 
 console.log('graphQL server listen port: ' + 4000);
