@@ -1,7 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React, { Component } from 'react';
+import { render } from 'react-dom';
 
-ReactDOM.render(
-    <h1>Hello, world3!</h1>,
+import App from './components/App';
+
+render(
+    <App />,
     document.getElementById('app')
 )
