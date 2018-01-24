@@ -1,11 +1,33 @@
+@import "normalize.css";
+
 * {
     padding: 0;
     margin: 0;
 }
 
-:global(.title) {
-    margin: 0;
+body {
+    width: 100%;
+    background-color: #f0f0f0;
 }
-.top {
-    padding: 0;
+
+.container {
+    width: 1336px;
+    margin: 0 auto;
+}
+
+ul {
+    list-style: none;
+    text-decoration: none;
+}
+
+:global(.span2) {
+    width: 194px;
+}
+
+:global(.span8) {
+    width: 779px;
+}
+
+:global(.span4) {
+    width: 389px;
 }
