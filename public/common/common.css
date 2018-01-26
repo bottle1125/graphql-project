@@ -20,14 +20,37 @@ ul {
     text-decoration: none;
 }
 
-:global(.span2) {
-    width: 194px;
+.span {
+    display: inline-block;
 }
 
-:global(.span8) {
-    width: 779px;
+.span2 {
+    composes: span;
+    width: 190px;
 }
 
-:global(.span4) {
-    width: 389px;
+.span8 {
+    composes: span;
+    width: 770px;
+    height: 100%;
+}
+
+.span4 {
+    composes: span;
+    width: 374px;
+}
+
+.span5 {
+    composes: span;
+    width: 480px;
+}
+
+.span10 {
+    composes: span;
+    width: 855px;
+}
+
+:global(img) {
+    width: 100%;
+    height: 100%;
 }

@@ -1,0 +1,79 @@
+.carouselWrap {
+    position:relative;
+    width: 100%;
+    height: 100%;
+}
+
+.image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+}
+
+.imgActive {
+    opacity: 1;
+}
+
+.pointWrap {
+    display: inline-block;
+    position: absolute;
+    bottom: 100px;
+    left: -25px;
+}
+
+.point {
+    display: block;
+    width: 15px;
+    height: 15px;
+    margin-top: 10px;
+}
+
+.pointItem {
+    display: inline-block;
+    border-radius: 50%;
+    height: 9px;
+    width: 9px;
+    position: relative;
+    top: 2px;
+    background-color: #fff;
+    border: 1px solid #9a9a9a;
+    transform: translateZ(0);
+}
+
+.point:hover span:not(.pointItemActive):after {
+    -webkit-transform: scale(.3);
+    transform: scale(.3);
+    -webkit-transition: -webkit-transform .3s cubic-bezier(.19,1,.22,1) 0ms,opacity 0ms cubic-bezier(.19,1,.22,1) 0ms;
+    -webkit-transition: opacity 0ms cubic-bezier(.19,1,.22,1) 0ms,-webkit-transform .3s cubic-bezier(.19,1,.22,1) 0ms;
+    transition: opacity 0ms cubic-bezier(.19,1,.22,1) 0ms,-webkit-transform .3s cubic-bezier(.19,1,.22,1) 0ms;
+    transition: transform .3s cubic-bezier(.19,1,.22,1) 0ms,opacity 0ms cubic-bezier(.19,1,.22,1) 0ms;
+    transition: transform .3s cubic-bezier(.19,1,.22,1) 0ms,opacity 0ms cubic-bezier(.19,1,.22,1) 0ms,-webkit-transform .3s cubic-bezier(.19,1,.22,1) 0ms;
+}
+
+.pointItem:after {
+    display: block;
+    content: '';
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+    background-color: #666;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: -webkit-transform .3s cubic-bezier(.785,.135,.15,.86) 0ms,opacity 0ms cubic-bezier(.19,1,.22,1) .25s;
+    -webkit-transition: opacity 0ms cubic-bezier(.19,1,.22,1) .25s,-webkit-transform .3s cubic-bezier(.785,.135,.15,.86) 0ms;
+    transition: opacity 0ms cubic-bezier(.19,1,.22,1) .25s,-webkit-transform .3s cubic-bezier(.785,.135,.15,.86) 0ms;
+    transition: transform .3s cubic-bezier(.785,.135,.15,.86) 0ms,opacity 0ms cubic-bezier(.19,1,.22,1) .25s;
+    transition: transform .3s cubic-bezier(.785,.135,.15,.86) 0ms,opacity 0ms cubic-bezier(.19,1,.22,1) .25s,-webkit-transform .3s cubic-bezier(.785,.135,.15,.86) 0ms;
+}
+
+.pointItemActive:after {
+    -webkit-transform: scale(1); 
+    transform: scale(1);
+    -webkit-transition: -webkit-transform .7s cubic-bezier(.19,1,.22,1) 0ms,opacity 0ms cubic-bezier(.19,1,.22,1) 0ms;
+    -webkit-transition: opacity 0ms cubic-bezier(.19,1,.22,1) 0ms,-webkit-transform .7s cubic-bezier(.19,1,.22,1) 0ms;
+    transition: opacity 0ms cubic-bezier(.19,1,.22,1) 0ms,-webkit-transform .7s cubic-bezier(.19,1,.22,1) 0ms;
+    transition: transform .7s cubic-bezier(.19,1,.22,1) 0ms,opacity 0ms cubic-bezier(.19,1,.22,1) 0ms;
+    transition: transform .7s cubic-bezier(.19,1,.22,1) 0ms,opacity 0ms cubic-bezier(.19,1,.22,1) 0ms,-webkit-transform .7s cubic-bezier(.19,1,.22,1) 0ms;
+}

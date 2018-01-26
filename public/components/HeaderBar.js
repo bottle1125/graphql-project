@@ -6,8 +6,8 @@ import styles from '../css/header.css';
 const Header = (props) => {
     return (
         <header>
-           <div className="span2">xxx</div>
-           <div className="span8"></div>
+           <div className={styles.title}>xxx</div>
+           <div className={styles.blank}></div>
            <div className="span4"></div>
         </header>
     );

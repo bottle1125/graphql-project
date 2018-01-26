@@ -1,0 +1,49 @@
+.wrap {
+    padding-top: 120px;
+}
+
+.container {
+    font-size: 0;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+}
+
+.leftContainer {
+    composes: span5 from '../common/common.css';
+    border-right: 1px solid #ccc;
+    vertical-align: top;
+}
+.rightContainer {
+    composes: span10 from '../common/common.css';
+}
+
+.date {
+    height: 200px;
+    border-bottom: 1px solid #ccc;
+}
+
+.imageWrap {
+    position: relative;
+    height: 499px;
+    border-bottom: 1px solid #ccc;
+}
+
+.introduction {
+    height: 298px;
+    border-bottom: 1px solid #ccc;
+}
+
+.stats {
+    composes: span4 from '../common/common.css';
+    height: 130px;
+    border-right: 1px solid #ccc;
+}
+
+.hobby {
+    height: 130px;
+}
+
+.contact {
+    composes: span5 from '../common/common.css';
+    height: 130px;
+}

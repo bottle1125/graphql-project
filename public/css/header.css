@@ -1,9 +1,15 @@
 .title {
-    width: 100%;
-    height: 800px;
-    font-size: 0;
-    background-image: url('../../assets/images/background.png');
-    background-size: contain;
+    composes: span2 from '../common/common.css';
+    height: 100%;
+    vertical-align: middle;
+    border-right: 1px solid #ccc;
+}
+
+.blank {
+    composes: span8 from '../common/common.css';
+    height: 100%;
+    vertical-align: middle;
+    border-right: 1px solid #ccc;
 }
 
 header {
@@ -13,4 +19,6 @@ header {
     transform: translateX(-50%);
     height: 61px;
     background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    z-index: 1000;
 }
