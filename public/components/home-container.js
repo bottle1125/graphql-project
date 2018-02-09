@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
 import Carousel from './carousel';
-import styles from '../css/container.css';
+import styles from '../css/home-container.css';
 
-class Container extends Component {
+class HomeContainer extends Component {
     constructor(props) {
         super(props);
 
@@ -29,7 +29,13 @@ class Container extends Component {
                         <div className={ styles.imageWrap }>
                             <Carousel images={this.state.images} />
                         </div>
-                        <div className={ styles.stats }></div>
+                        <div className={ styles.stats }>
+                            <div className={ styles.topTitle }></div>
+                            <div className={ styles.bottomCount }>
+                                <div className={ styles.pointCount }></div>
+                                <div className={ styles.dayCount }></div>
+                            </div>
+                        </div>
                         <div className={ styles.contact }></div>
                     </div>
                 </div>
@@ -38,4 +44,4 @@ class Container extends Component {
     }
 }
 
-export default Container;
+export default HomeContainer;

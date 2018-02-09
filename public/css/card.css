@@ -1,0 +1,30 @@
+.timeElement {
+    margin-top: 200px;
+    width: 567px;
+    height: 400px;
+    background-color: #fff;
+    transition: all .5s linear;
+}
+
+.timeElementRight {
+    composes: timeElement;
+    float: right;
+}
+
+.timeElementLeft {
+    composes: timeElement;
+    float: left;
+    position: relative;
+    top: 150px;
+}
+
+.timeElementRightActive {
+    composes: timeElementRight;
+    margin-top: 150px;
+}
+
+.timeElementLeftActive {
+    composes: timeElementLeft;
+    margin-top: 150px;
+}
+

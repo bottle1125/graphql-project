@@ -1,0 +1,51 @@
+.blockCenter {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.timeLine {
+    width: 768px;
+    height: 100px;
+    background-color: #fff;
+    border: 1px solid #f0f0f0;
+    border-top: none;
+    border-left: none;
+    position: relative;
+}
+
+.pageLine {
+    composes: blockCenter;
+    width: 1px;
+    height: 100%;
+    background: #f0f0f0;
+}
+
+.arrow {
+    display: inline-block;
+    position: absolute;
+    top: 30px;
+    right: 55px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #f0f0f0;
+    border-color: transparent #f0f0f0 #f0f0f0 transparent;
+    transform: rotate(45deg);
+}
+
+.timeLineWrap {
+    position: relative;
+    overflow: hidden;
+}
+
+.timeLineWrap::before {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    content: '';
+    display: block;
+    width: 200px;
+    height: 100%;
+    background: #fff;
+}
+

@@ -14,16 +14,17 @@ class Carousel extends Component {
         }
 
         this.toggleImage = this.toggleImage.bind(this);
-        console.log(this.toggleImage);
     }
+
     toggleImage(key) {
         this.setState({
             key: key
         });
     }
+
     render() {
         const { images } = this.props;
-        console.log(this.toggleImage);
+
         const ImageItems = images.map((item, key) => 
             <img src={item} key={key} className={ cx({
                 image: true,
@@ -31,6 +32,7 @@ class Carousel extends Component {
                 imgPrev: this.state.key === key+1
             }) } />
         );
+
         const PointItems = images.map((item, key) => 
             <a className={ styles.point } key={key} onClick={() => { this.toggleImage(key) }}>
                 <span className={ cx({
@@ -39,6 +41,7 @@ class Carousel extends Component {
                 }) }></span>
             </a>
         );
+
         return (
             <div className={ styles.carouselWrap }>
                 <div className={ styles.pointWrap }>
@@ -50,6 +53,7 @@ class Carousel extends Component {
             </div>
         )
     }
+
     componentDidMount() {
         const { images } = this.props;
         const len = images.length;
@@ -66,7 +70,6 @@ class Carousel extends Component {
                 });
             }
         }, 5000);
-
     }
 };
 

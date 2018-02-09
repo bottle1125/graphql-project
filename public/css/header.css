@@ -2,14 +2,14 @@
     composes: span2 from '../common/common.css';
     height: 100%;
     vertical-align: middle;
-    border-right: 1px solid #ccc;
+    border-right: 1px solid #f0f0f0;
 }
 
 .blank {
     composes: span8 from '../common/common.css';
     height: 100%;
     vertical-align: middle;
-    border-right: 1px solid #ccc;
+    border-right: 1px solid #f0f0f0;
 }
 
 header {
@@ -19,6 +19,6 @@ header {
     transform: translateX(-50%);
     height: 61px;
     background-color: #fff;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #f0f0f0;
     z-index: 1000;
 }

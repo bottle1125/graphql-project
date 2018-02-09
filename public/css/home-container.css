@@ -5,12 +5,12 @@
 .container {
     font-size: 0;
     background-color: #fff;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #f0f0f0;
 }
 
 .leftContainer {
     composes: span5 from '../common/common.css';
-    border-right: 1px solid #ccc;
+    border-right: 1px solid #f0f0f0;
     vertical-align: top;
 }
 .rightContainer {
@@ -19,13 +19,13 @@
 
 .date {
     height: 200px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #f0f0f0;
 }
 
 .imageWrap {
     position: relative;
     height: 499px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #f0f0f0;
 }
 
 .introduction {
@@ -36,7 +36,7 @@
 .stats {
     composes: span4 from '../common/common.css';
     height: 130px;
-    border-right: 1px solid #ccc;
+    border-right: 1px solid #f0f0f0;
 }
 
 .hobby {
@@ -46,4 +46,14 @@
 .contact {
     composes: span5 from '../common/common.css';
     height: 130px;
+}
+
+.topTitle {
+    height: 80px;
+    border-bottom: 1px solid #f0f0f0;
+}
+.pointCount {
+    width: 186px;
+    height: 49px;
+    border-right: 1px solid #f0f0f0;
 }
